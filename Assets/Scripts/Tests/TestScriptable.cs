@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemManager : MonoBehaviour
+public class TestScriptable : MonoBehaviour
 {
-    public int machin;
-
     private void Start()
     {
         ItemManagerParameters itemManagerParameters = Resources.Load<ItemManagerParameters>("ItemManagerParameters");
@@ -15,6 +13,4 @@ public class ItemManager : MonoBehaviour
 
 
     }
-
-
 }

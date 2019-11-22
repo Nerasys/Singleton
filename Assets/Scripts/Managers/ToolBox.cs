@@ -9,13 +9,13 @@ public class ToolBox : Singleton<ToolBox>
     private void Awake()
     {
         AddManager<ItemManager>();
+        AddManager<QuestManager>();
     }
 
 
     public void DebugReset()
     {
         RemoveManager<ItemManager>();
-
 
         AddManager<ItemManager>();
 
@@ -28,7 +28,7 @@ public class ToolBox : Singleton<ToolBox>
         {
             GameObject go = new GameObject(typeof(T).Name);
             managers[typeof(T)] = go.AddComponent<T>();
-            go.transform.parent = transform.parent;
+            go.transform.parent = transform;
         }
 
     }
